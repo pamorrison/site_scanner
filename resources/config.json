@@ -1,0 +1,6 @@
+{
+    "first # sites":"10",
+    "data dir":"../_data/hackathons.csv",
+    "site text dir":"resources/sitetext.json",
+    "artifacts dir":"resources/artifacts/"
+}

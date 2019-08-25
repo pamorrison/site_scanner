@@ -1,6 +1,10 @@
 {
-    "first # sites":"10",
-    "data dir":"../_data/hackathons.csv",
-    "site text dir":"resources/sitetext.json",
-    "artifacts dir":"resources/artifacts/"
+    "numsites"       : "10",
+    "datafiledir"    : "resources/sample_data.csv",
+    "datafilename"   : "\"sample_data.csv\"",
+    "sitefiledir"    : "resources/sitetext.json",
+    "sitefilename"   : "\"sitetext.json\"",
+    "artifactdir"    : "resources/artifacts/",
+    "options"        : "12345swcheSWCHE",
+    "win"            : ["win32","Windows"]
 }

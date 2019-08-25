@@ -68,6 +68,7 @@ if __name__=="__main__":
         
     choice = "_"
     program_continue = True
+    artifacts_exist = False
     
     while program_continue:
         
@@ -104,6 +105,30 @@ if __name__=="__main__":
         
         program_continue = site_scanner_menu(choice,cfg)
         choice = "_"
-
+    
+    
+    if len(os.listdir(cfg["artifactdir"])) != 0:
+        for item in os.listdir(cfg["artifactdir"]):
+            if ".artifact" in item:
+                artifacts_exist = True
+    
+    if artifacts_exist:
+        print("\n    You're about to exit the program.")
+        print("    There are artifacts left from a previous scan.")
+        print("    CAUTION: Removing them will prevent writing their data.")
+        print("    Would you like to clear the current batch of artifacts?")
+        print("    (Y)es/(N)o: ",end="")
+        choice = input()
+        
+        if choice in ["y","Y","yes","Yes","YES"]:
+            artifacts_directory_list = os.listdir(cfg["artifactdir"])
+            for filename in artifacts_directory_list:
+                if ".artifact" in filename:
+                    os.remove(cfg["artifactdir"]+filename)
+        
+            print("\n    All artifacts removed.")
+        
+    print("\n    Exiting program.\n")
+            
     time.sleep(1)
     

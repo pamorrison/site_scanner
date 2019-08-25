@@ -40,8 +40,6 @@ def site_scanner_menu(c, config):
         return site_scanner_write(config)
     if c in "4hH":
         return site_scanner_help(config)
-    if c in "5eE":
-        return site_scanner_exit()
     return False
 
 
@@ -214,11 +212,5 @@ def site_scanner_help(config):
     time.sleep(1)
     return True
 
-
-
-def site_scanner_exit():
-    print("\n    Exiting Program.\n")
-    time.sleep(1)
-    return False
 
 
